@@ -1,0 +1,45 @@
+AppBundle\Entity\Products:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ProductsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        productId:
+            type: integer
+            unique: true
+            column: product_id
+        name:
+            type: string
+            length: 255
+        price:
+            type: integer
+        categoryId:
+            type: integer
+            nullable: true
+            column: category_id
+        availability:
+            type: string
+            length: 255
+            nullable: true
+        productCondition:
+            type: string
+            length: 255
+            nullable: true
+            column: product_condition
+        brand:
+            type: string
+            length: 255
+            nullable: true
+        image:
+            type: string
+            length: 255
+            nullable: true
+        details:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
